@@ -1,4 +1,4 @@
-package ru.sbrf.oraclemetricscollector.controllers;
+package org.oleggalimov.oraclemetricscollector.controllers;
 
 
 import org.springframework.stereotype.Controller;

@@ -1,8 +1,8 @@
-package ru.sbrf.oraclemetricscollector.utility;
+package org.oleggalimov.oraclemetricscollector.utility;
 
 import org.influxdb.InfluxDB;
 import org.influxdb.dto.Point;
-import ru.sbrf.oraclemetricscollector.data.Instance;
+import org.oleggalimov.oraclemetricscollector.data.Instance;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

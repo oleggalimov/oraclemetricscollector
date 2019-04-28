@@ -1,4 +1,4 @@
-package ru.sbrf.oraclemetricscollector.data;
+package org.oleggalimov.oraclemetricscollector.data;
 
 
 import java.util.Objects;

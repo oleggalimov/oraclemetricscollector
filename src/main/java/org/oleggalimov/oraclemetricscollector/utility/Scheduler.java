@@ -1,17 +1,14 @@
-package ru.sbrf.oraclemetricscollector.utility;
+package org.oleggalimov.oraclemetricscollector.utility;
 
 import org.influxdb.InfluxDB;
+import org.oleggalimov.oraclemetricscollector.data.Instance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.sbrf.oraclemetricscollector.data.Instance;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.concurrent.ExecutorService;

@@ -1,9 +1,9 @@
-package ru.sbrf.oraclemetricscollector.rest;
+package org.oleggalimov.oraclemetricscollector.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.oleggalimov.oraclemetricscollector.data.Instance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.sbrf.oraclemetricscollector.data.Instance;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;

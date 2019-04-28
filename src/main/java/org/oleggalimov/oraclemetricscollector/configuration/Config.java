@@ -1,8 +1,9 @@
-package ru.sbrf.oraclemetricscollector.configuration;
+package org.oleggalimov.oraclemetricscollector.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.influxdb.InfluxDB;
 import org.influxdb.InfluxDBFactory;
+import org.oleggalimov.oraclemetricscollector.data.Instance;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
@@ -14,7 +15,6 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.*;
-import ru.sbrf.oraclemetricscollector.data.Instance;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 
 
 @Configuration
-@ComponentScan (basePackages="ru.sbrf.oraclemetricscollector")
+@ComponentScan (basePackages="org.oleggalimov.oraclemetricscollector")
 @EnableScheduling
 @EnableWebMvc
 @PropertySources({
@@ -45,7 +45,7 @@ public class Config  implements WebMvcConfigurer, WebApplicationInitializer  {
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("ru.sbrf.oraclemetricscollector.configuration.Config");
+        context.setConfigLocation("org.oleggalimov.oraclemetricscollector.configuration.Config");
         servletContext.addListener(new ContextLoaderListener(context));
 
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
